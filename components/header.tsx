@@ -53,7 +53,10 @@ export default function Header() {
             >
               {isOpen ? <PiLightbulbFilamentFill size={24} /> : <Menu size={24} />}
             </button>
-            <Button className="hidden md:inline-flex bg-[#FFD700] text-black hover:bg-[#FFC700] font-medium px-6">
+            <Button className="hidden md:inline-flex bg-[#FFD700] text-black hover:bg-[#FFC700] font-medium px-6"
+              onClick={() => {
+                window.open('https://www.sohamdatta.com', '_blank')
+              }}>
               Contact Us
             </Button>
           </div>
