@@ -1,6 +1,6 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -9,14 +9,32 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ProdInno | VIT Chennai",
-  description: "A club to foster innovation and product development at VIT Chennai and grant excessive On Duties ;)",
+  title: "ProdInno | Soham Datta",
+  description: "A modern website template built with Next.js, TypeScript, and Tailwind CSS. Features dark theme, animations, and responsive design.",
   authors: [
     {
       name: "Soham Datta",
       url: "www.sohamdatta.com",
     },
-  ]
+  ],
+  openGraph: {
+    title: "ProdInno | Soham Datta",
+    description: "A modern website template built with Next.js, TypeScript, and Tailwind CSS. Features dark theme, animations, and responsive design.",
+    images: [
+      {
+        url: "/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "ProdInno Website Template",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ProdInno | Soham Datta",
+    description: "A modern website template built with Next.js, TypeScript, and Tailwind CSS.",
+    images: ["/preview.png"],
+  },
 };
 
 export default function RootLayout({
