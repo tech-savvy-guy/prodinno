@@ -1,8 +1,16 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
+
+import localFont from 'next/font/local'
 import Spline from '@splinetool/react-spline'
+
+const technor = localFont({
+  src: '../app/fonts/Technor.woff',
+  variable: '--font-technor',
+  weight: '100 900'
+});
 
 export default function Hero() {
   return (
@@ -35,7 +43,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              BUILD A POWERFUL AGENCY SITE WITH FRAMER
+              BUILD A POWERFUL AGENCY SITE WITH <span className={`text-[#FFD700] text-5xl md:text-6xl lg:text-7xl font-bold ${technor.className}`}>ProdInno</span>
             </motion.h1>
             <motion.p
               className="text-gray-400 text-lg mb-8 max-w-2xl"
